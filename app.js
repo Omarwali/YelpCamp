@@ -15,7 +15,8 @@ const campgroundRoutes = require('./routes/campgrounds'),
       commentRoutes    = require('./routes/comments'),
       authRoutes       = require('./routes/auth')
 
-mongoose.connect('mongodb://localhost/yelp_camp', {useMongoClient: true})
+// mongoose.connect('mongodb://localhost/yelp_camp', {useMongoClient: true})
+mongoose.connect('mongodb://omarwali:SMASH4ZOE3$@ds031895.mlab.com:31895/yelpcamp', {useMongoClient: true})
 mongoose.Promise = global.Promise
 app.use(bodyParser.urlencoded({extended: true}))
 app.set('view engine', 'ejs')
@@ -65,3 +66,7 @@ app.get('/', function(req, res){
 app.listen(process.env.PORT, process.env.IP, function () {
     console.log("Server is running!");
 });
+
+// app.listen(3000, function(){
+//   console.log("Server is running on port 3000");
+// })
