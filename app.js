@@ -22,7 +22,7 @@ app.set('view engine', 'ejs')
 app.use(express.static(`${__dirname}/public`))
 app.use(methodOverride('_method'))
 app.use(flash())
-// seedDB() //seed the database
+seedDB() //seed the database
 
 //==========================
 // PASSPORT CONFIGURATION
@@ -62,6 +62,6 @@ app.get('/', function(req, res){
 // SERVER
 //============
 
-app.listen(3000, function(){
-  console.log("Server running on port 3000!")
-})
+app.listen(process.env.PORT, process.env.IP, function () {
+    console.log("Server is running!");
+});
