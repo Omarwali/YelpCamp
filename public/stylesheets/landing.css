@@ -80,3 +80,8 @@ body {
 .no-cssanimations .slideshow li {
 	opacity: 1;
 }
+
+.glyphicon-tent:before {
+  position: relative;
+  top: 3px;
+}
